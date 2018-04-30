@@ -95,6 +95,7 @@ function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
 // Para chequear si la posicón está dentro de la grilla.
 function posicionValida(fila, columna) {
     //COMPLETAR
+    return (columna >= 0 && columna <= 2) && (fila >= 0 && fila <= 2);
 }
 
 /* Movimiento de fichas, en este caso la que se mueve es la blanca intercambiando su posición con otro elemento.
