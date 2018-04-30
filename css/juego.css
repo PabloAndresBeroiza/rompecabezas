@@ -37,7 +37,22 @@ li::before {
 
 .col-60 {
   background: #E84A5F;
+  width: 600px;
+  height: 600px;
+  background-color: #E84A5F;
 
+}
+.piezas{
+  width: 33.33%;
+  float: left;
+}
+
+img{
+  width: 100%;
+}
+
+.img-objetivo{
+  width: 100%;
 }
 
 #flecha{
