@@ -59,7 +59,15 @@ return true;
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
     //COMPLETAR
+    alert("¡Well Done...!!!!");
+    var respuesta = confirm("¿Querés volver a jugar?");
+   
+    if (respuesta) {
+        // iniciar();
+        console.log("jugar de nuevo");
+    }
 }
+
 
 /* Función que intercambia dos posiciones en la grilla.
 Pensar como intercambiar dos posiciones en un arreglo de arreglos. 
