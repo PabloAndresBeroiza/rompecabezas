@@ -46,15 +46,14 @@ function chequearSiGano() {
         for (var columna = 0; columna < grilla[fila].length; columna++) {
             valorActual = grilla[fila][columna];
             // console.log(secuenciaGanadora+" - "+valorActual);
-                if (secuenciaGanadora != valorActual) {
+                if (secuenciaGanadora !== valorActual) {
                     return false;
                 }
-            secuenciaGanadora++   
+            secuenciaGanadora++;   
         }
     }
 return true;
 }
-
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
@@ -89,6 +88,8 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
 // Actualiza la posición de la pieza vacía
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
     //COMPLETAR
+    filaVacia = nuevaFila;
+    columnaVacia = nuevaColumna;
 }
 
 
@@ -164,7 +165,7 @@ var codigosDireccion = {
     ARRIBA: 38,
     DERECHA: 39,
     ABAJO: 40
-}
+};
 
 /* Funcion que realiza el intercambio logico (en la grilla) y ademas actualiza
 el intercambio en la pantalla (DOM). Para que funcione debera estar implementada
@@ -269,15 +270,15 @@ function capturarTeclas() {
             }
             evento.preventDefault();
         }
-    })
+    });
 }
 
-/* Se inicia el rompecabezas mezclando las piezas 60 veces 
+/* Se inicia el rompecabezas mezclando las piezas 10 veces 
 y ejecutando la función para que se capturen las teclas que 
 presiona el usuario */
 function iniciar() {
     mostrarInstrucciones(instrucciones);
-    mezclarPiezas(30);
+    mezclarPiezas(10);
     capturarTeclas();
 }
 
