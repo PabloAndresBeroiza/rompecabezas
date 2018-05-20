@@ -62,7 +62,8 @@ function mostrarCartelGanador() {
     var respuesta = confirm("¿Querés volver a jugar?");
    
     if (respuesta) {
-        // iniciar();
+        //iniciar();
+        mezclarPiezas(30);
         console.log("jugar de nuevo");
     }
 }
@@ -79,7 +80,7 @@ En vez de intercambiar esos valores vamos a terminar teniendo en ambas posicione
 Se te ocurre cómo solucionar esto con una variable temporal?
 */
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2) {
-    //COMPLETAR
+    //COMPLETAR OK
     var piezaTemporal = grilla[filaPos1][columnaPos1];
     grilla[filaPos1][columnaPos1] = grilla[filaPos2][columnaPos2];
     grilla[filaPos2][columnaPos2] = piezaTemporal;
@@ -87,7 +88,7 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
 
 // Actualiza la posición de la pieza vacía
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
-    //COMPLETAR
+    //COMPLETAR OK
     filaVacia = nuevaFila;
     columnaVacia = nuevaColumna;
 }
@@ -95,7 +96,7 @@ function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
 
 // Para chequear si la posicón está dentro de la grilla.
 function posicionValida(fila, columna) {
-    //COMPLETAR//como saber dinamicamente area de la grilla
+    //COMPLETAR  OK//como saber dinamicamente area de la grilla
     return (columna >= 0 && columna <= 2) && (fila >= 0 && fila <= 2);
 }
 
@@ -119,14 +120,14 @@ function moverEnDireccion(direccion) {
 
     // Mueve pieza hacia la derecha, reemplazandola con la blanca
     else if (direccion === codigosDireccion.DERECHA) {
-        //COMPLETAR
+        //COMPLETAR OK
         nuevaFilaPiezaVacia = filaVacia;
         nuevaColumnaPiezaVacia = columnaVacia - 1;
     }
 
     // Mueve pieza hacia la izquierda, reemplazandola con la blanca
     else if (direccion === codigosDireccion.IZQUIERDA) {
-        // COMPLETAR
+        // COMPLETAR OK
         nuevaFilaPiezaVacia = filaVacia;
         nuevaColumnaPiezaVacia = columnaVacia + 1; 
     }
@@ -139,8 +140,8 @@ function moverEnDireccion(direccion) {
         intercambiarPosiciones(filaVacia, columnaVacia, nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
         actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
 
-        //COMPLETAR: Agregar la dirección del movimiento al arreglo de movimientos
-
+        //COMPLETAR:OK Agregar la dirección del movimiento al arreglo de movimientos
+        mostrarUltimoMovimiento(direccion);
     }
 }
 
@@ -268,7 +269,7 @@ function capturarTeclas() {
                     mostrarCartelGanador();
                 }, 500);
             }
-            evento.preventDefault();
+        evento.preventDefault();
         }
     });
 }

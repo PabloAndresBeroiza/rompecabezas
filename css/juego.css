@@ -43,7 +43,8 @@ li::before {
 
 }
 .piezas{
-  width: 33.33%;
+  width: 200px;
+  height: 200px;
   float: left;
 }
 
