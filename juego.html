@@ -6,16 +6,27 @@
     <link rel="stylesheet" href="css/juego.css">
   </head>
   <body>
-    <div class="col-40">
-    
+      <!-- Modal que aparece cuando se gana el juego -->
+      <div id="modalGanaste" class="modal">
+
+          <!-- Modal -->
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>¡Well Done! <br>¿Seguir jugando?</p>
+              <button class="mezclar" id="mezclar">Jugar</button>
+          </div>
+      </div>
+
+      <div class="col-40">
+        
       <div id="titulo">
-        <h1>Rompecabezas</h1>
+          <h1>Rompecabezas</h1> 
       </div>
       <div id="instrucciones">
         <h1>Instrucciones</h1>
         <ul id="lista-instrucciones">
           
-        </ul>
+        </ul>      
       </div>
       <div id="objetivo">
         <div class="texto-centrado">
@@ -43,8 +54,8 @@
       </div>
     </div>
     <div id="footer">
-      
-    </div>
+        
+    </div>      
     <script src="js/juego.js"></script>
   </body>
 </html>

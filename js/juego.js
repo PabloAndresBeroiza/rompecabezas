@@ -57,15 +57,30 @@ return true;
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
-    //COMPLETAR
-    alert("¡Well Done...!!!!");
-    var respuesta = confirm("¿Querés volver a jugar?");
-   
-    if (respuesta) {
-        //iniciar();
-        mezclarPiezas(30);
-        console.log("jugar de nuevo");
-    }
+    //COMPLETAR OK
+
+    var modal = document.getElementById('modalGanaste');
+    var span = document.getElementsByClassName("close")[0];
+    var boton = document.querySelector("#mezclar");
+    modal.style.display = "block";
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // reinicia el juego
+    boton.addEventListener('click', function () {
+        modal.style.display = "none";
+        mezclarPiezas(10);
+    });
+
+    // Cuando hace click fuera del modal se cierra
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+
 }
 
 
