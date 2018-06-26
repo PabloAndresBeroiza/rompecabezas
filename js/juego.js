@@ -71,7 +71,7 @@ function mostrarCartelGanador() {
     // reinicia el juego
     boton.addEventListener('click', function () {
         modal.style.display = "none";
-        mezclarPiezas(10);
+        mezclarPiezas(5);
     });
 
     // Cuando hace click fuera del modal se cierra
@@ -294,7 +294,7 @@ y ejecutando la función para que se capturen las teclas que
 presiona el usuario */
 function iniciar() {
     mostrarInstrucciones(instrucciones);
-    mezclarPiezas(10);
+    mezclarPiezas(5);
     capturarTeclas();
 }
 
